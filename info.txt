@@ -1,0 +1,23 @@
+
+
+php bin/console server:start
+
+php bin/console debug:router
+
+
+один з методі робити роути:
+
+config\routes\routes.yaml
+
+hello_page:
+  path: /
+  controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+  defaults:
+    template: 'hello_page.html.twig'
+
+
+templates/hello_page.html.twig
+Hello from Symfony!
+
+-- another метод робити роути:
+ php bin/console make:controller
